@@ -5,9 +5,9 @@ using UnityEngine;
 public class terminalRadio : MonoBehaviour
 {
 
-    //public bool move = false;
+    public bool move = false;
 
-    //public bool cycleTarget = false;
+    public bool cycleTarget = false;
 
     private int targetNumber = 0;
 
@@ -62,21 +62,21 @@ public class terminalRadio : MonoBehaviour
 
     void Update()
     {
-        //if (cycleTarget)
-        //{
-        //    CycleTarget();
-        //    cycleTarget = false;
-        //}
+        if (cycleTarget)
+        {
+            CycleTarget();
+            cycleTarget = false;
+        }
 
-        //if (move)
-        //{
-        //    CallWallMovement();
-        //    move = false;
-        //}
+        if (move)
+        {
+            CallWallMovement();
+            move = false;
+        }
 
 
 
-        
+
     }
 
 

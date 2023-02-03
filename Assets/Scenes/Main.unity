@@ -285,6 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc860837b571a84e8650cbb9ac84396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: 0
+  cycleTarget: 0
   moveAmount: 1
   isX: 1
   targetWalls:
@@ -463,6 +465,9 @@ MonoBehaviour:
   isX: 1
   moveAmount: 0
   isSelected: 0
+  totalMovement: 0
+  positiveMoveLimit: 3
+  negativeMoveLimit: -6
 --- !u!50 &1316594961
 Rigidbody2D:
   serializedVersion: 4
