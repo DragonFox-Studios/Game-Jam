@@ -14,19 +14,26 @@ public class playerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+
+
+    void MovePlayer()
+    {
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(speed * inputX, speed * inputY);
+
+        movement = movement * Time.deltaTime;
+
+        rb.velocity = (movement);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         if (!terminalInteraction)
         {
-            float inputX = Input.GetAxis("Horizontal");
-            float inputY = Input.GetAxis("Vertical");
-
-            Vector3 movement = new Vector3(speed * inputX, speed * inputY);
-
-            movement = movement * Time.deltaTime;
-
-            rb.velocity = (movement);
+            MovePlayer();
         }
     }
 }
