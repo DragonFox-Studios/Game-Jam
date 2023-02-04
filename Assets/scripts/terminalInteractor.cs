@@ -8,7 +8,7 @@ public class terminalInteractor : MonoBehaviour
     public GameObject terminalScreen;
 
     private bool interacting;
-    public bool terminalClosed = true; //set this to True when terminal is closed
+    public static bool terminalClosed = true; //set this to True when terminal is closed
 
     public GameObject terminalCam;
     public float zoomTime;
@@ -50,12 +50,7 @@ public class terminalInteractor : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && interacting && terminalClosed)
-        {
-            OpenTerminal();
-        }
-        //test code
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && interacting && terminalClosed)
         {
             OpenTerminal();
         }

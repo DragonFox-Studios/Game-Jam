@@ -18,14 +18,17 @@ public class playerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-        float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
+        if (terminalInteractor.terminalClosed)
+        {
+            float inputX = Input.GetAxis("Horizontal");
+            float inputY = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(speed * inputX, speed * inputY);
+            Vector3 movement = new Vector3(speed * inputX, speed * inputY);
 
-        movement = movement * Time.deltaTime;
+            movement = movement * Time.deltaTime;
 
-        rb.velocity = (movement);
+            rb.velocity = (movement);
+        }
     }
 
     // Update is called once per frame
