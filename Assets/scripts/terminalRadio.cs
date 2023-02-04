@@ -66,6 +66,7 @@ public class terminalRadio : MonoBehaviour
         Debug.Log("cycleTarget");
         if (cycleUp && pauseGame.isGameRunning)
         {
+            DeselectWall();
             targetNumber++;
             if (targetNumber >= targetWalls.Count)
             {
@@ -74,6 +75,7 @@ public class terminalRadio : MonoBehaviour
         }
         else if (pauseGame.isGameRunning)
         {
+            DeselectWall();
             targetNumber--;
             if (targetNumber < 0)
             {
