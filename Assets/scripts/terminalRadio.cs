@@ -16,6 +16,8 @@ public class terminalRadio : MonoBehaviour
 
     private wallMovement targetScript;
 
+    public GameObject cycleDown;
+    public GameObject cycleUp;
 
     public GameObject buttonUp;
     public GameObject buttonDown;
@@ -85,6 +87,16 @@ public class terminalRadio : MonoBehaviour
 
     void ChangeButtons()
     {
+        if (targetWalls.Count == 1)
+        {
+            cycleUp.SetActive(false);
+            cycleDown.SetActive(false);
+        }
+        else
+        {
+            cycleUp.SetActive(true);
+            cycleDown.SetActive(true);
+        }
         if (isX)
         {
             buttonUp.SetActive(false);
