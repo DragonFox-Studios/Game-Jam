@@ -7,7 +7,12 @@ public class terminalInteractor : MonoBehaviour
     private bool interacting;
     public bool terminalClosed = true; //set this to True when terminal is closed
 
-    // Start is called before the first frame update
+    public GameObject terminalCam;
+    public GameObject terminalScreen;
+    public float zoomTime;
+
+
+
     void Start()
     {
         
@@ -17,18 +22,38 @@ public class terminalInteractor : MonoBehaviour
 
     void OpenTerminal()
     {
-        terminalClosed = false;
-        //add whatever visual trickery in here
-        Debug.Log("TESTTERMINALOPENED");
+        if (terminalClosed)
+        {
+            //Open Terminal
+            terminalClosed = false;
+            //add whatever visual trickery in here
+            StartCoroutine(camZoomIn());
+
+            Debug.Log("TESTTERMINALOPENED");
+        }
+        else
+        {
+            //Close Terminal
+            terminalClosed = true;
+            //add whatever visual trickery in here
+            StartCoroutine(camZoomOut());
+
+            Debug.Log("TESTTERMINALCLOSED");
+        }
+
     }
 
 
 
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && interacting && terminalClosed)
+        {
+            OpenTerminal();
+        }
+        //test code
+        if (Input.GetKeyDown(KeyCode.E))
         {
             OpenTerminal();
         }
@@ -42,5 +67,19 @@ public class terminalInteractor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         interacting = false;
+    }
+
+    public IEnumerator camZoomIn()
+    {
+        terminalCam.SetActive(true);
+        yield return new WaitForSeconds(zoomTime);
+        terminalScreen.SetActive(true);
+    }
+
+    public IEnumerator camZoomOut()
+    {
+        terminalCam.SetActive(false);
+        yield return new WaitForSeconds(zoomTime);
+        terminalScreen.SetActive(false);
     }
 }
