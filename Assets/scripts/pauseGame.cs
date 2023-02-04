@@ -6,6 +6,7 @@ public class pauseGame : MonoBehaviour
 {
 
     public static bool isGameRunning = true;
+    public GameObject pauseScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,15 @@ public class pauseGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isGameRunning = !isGameRunning;
+
+            if (isGameRunning)
+            {
+                pauseScreen.SetActive(false);
+            }
+            else
+            {
+                pauseScreen.SetActive(true);
+            }
         }
     }
 }
