@@ -5,6 +5,8 @@ using UnityEngine;
 public class terminalInteractor : MonoBehaviour
 {
 
+    public static GameObject currentTerminal;
+
     public GameObject terminalScreen;
 
     private bool interacting;
@@ -26,6 +28,7 @@ public class terminalInteractor : MonoBehaviour
     {
         if (terminalClosed)
         {
+            currentTerminal = gameObject;
             //Open Terminal
             terminalClosed = false;
             //add whatever visual trickery in here
