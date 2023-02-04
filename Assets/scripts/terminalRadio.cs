@@ -16,13 +16,13 @@ public class terminalRadio : MonoBehaviour
 
     private wallMovement targetScript;
 
-    public GameObject cycleDown;
-    public GameObject cycleUp;
 
-    public GameObject buttonUp;
-    public GameObject buttonDown;
-    public GameObject buttonLeft;
-    public GameObject buttonRight; 
+    public static GameObject cycleDown;
+    public static GameObject cycleUp;
+    public static GameObject buttonUp;
+    public static GameObject buttonDown;
+    public static GameObject buttonLeft;
+    public static GameObject buttonRight; 
 
     // Start is called before the first frame update
     void Start()
