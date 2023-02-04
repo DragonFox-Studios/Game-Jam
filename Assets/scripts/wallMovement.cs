@@ -11,9 +11,9 @@ public class wallMovement : MonoBehaviour
     public int totalMovement;
     public int positiveMoveLimit = 5;
     public int negativeMoveLimit = -5;
+    public GameObject sectionCam;
     
     
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -47,7 +47,6 @@ public class wallMovement : MonoBehaviour
 
 
 
-    // Update is called once per frame
     void Update()
     {
 

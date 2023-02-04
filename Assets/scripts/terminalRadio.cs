@@ -33,10 +33,11 @@ public class terminalRadio : MonoBehaviour
     void SelectWall()
     {
         //select the wall
-        try { targetScript.isSelected = false; }
+        try { targetScript.isSelected = false; targetScript.sectionCam.SetActive(false); }
         catch { }
         targetScript = targetWalls[targetNumber].GetComponent<wallMovement>();
         targetScript.isSelected = true;
+        targetScript.sectionCam.SetActive(true);
 
         //change the terminal
         isX = targetScript.isX;
