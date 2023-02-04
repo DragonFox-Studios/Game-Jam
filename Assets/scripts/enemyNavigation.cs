@@ -10,6 +10,7 @@ public class enemyNavigation : MonoBehaviour
     int currentWaypoint = 0;
     private Transform target;
     public float speed = 1f;
+    public float deathTime = 1;
 
 
     // Start is called before the first frame update
@@ -47,20 +48,25 @@ public class enemyNavigation : MonoBehaviour
         Debug.Log("collided");
         if (collision.gameObject.tag.Equals("Player"))
         {
-            DeathAnimation();
+            StartCoroutine(DeathAnimation());
         }
     }
 
-    void DeathAnimation()
+    public IEnumerator DeathAnimation()
     {
-
+        Debug.Log("playerDies");
+        pauseGame.isGameRunning = !pauseGame.isGameRunning;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 
         //add cool shit here
 
+        yield return new WaitForSeconds(deathTime);
 
 
         //then restart game
+        pauseGame.isGameRunning = !pauseGame.isGameRunning;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 
 
