@@ -14,6 +14,8 @@ public class gameObjectLocator : MonoBehaviour
 
     public void findTerminalCycle(bool isPositive)
     {
+        Debug.Log("terminalcycle");
+
         terminalRadio currentRadioScript = terminalInteractor.currentTerminal.GetComponent<terminalRadio>();
 
 
@@ -26,6 +28,8 @@ public class gameObjectLocator : MonoBehaviour
 
     public void findTerminalMove(bool isPositive)
     {
+        Debug.Log("terminalmove");
+
         terminalRadio currentRadioScript = terminalInteractor.currentTerminal.GetComponent<terminalRadio>();
 
         currentRadioScript.CallWallMovement(isPositive);

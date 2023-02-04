@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseMenuFunctions : MonoBehaviour
 {
@@ -14,11 +15,15 @@ public class pauseMenuFunctions : MonoBehaviour
 
     public void RestartGame()
     {
+        pauseGame.isGameRunning = !pauseGame.isGameRunning;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
 
     public void MainMenu()
     {
+        pauseGame.isGameRunning = !pauseGame.isGameRunning;
+        SceneManager.LoadScene("StartMenu");
 
     }
 
