@@ -28,12 +28,17 @@ public class terminalRadio : MonoBehaviour
     }
 
 
+    public void DeactivateWall()
+    {
+        targetScript.isSelected = false; targetScript.sectionCam.SetActive(false);
+    }
+
 
 
     void SelectWall()
     {
         //select the wall
-        try { targetScript.isSelected = false; targetScript.sectionCam.SetActive(false); }
+        try { DeactivateWall(); }
         catch { }
         targetScript = targetWalls[targetNumber].GetComponent<wallMovement>();
         targetScript.isSelected = true;

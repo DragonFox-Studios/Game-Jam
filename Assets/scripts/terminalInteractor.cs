@@ -37,6 +37,7 @@ public class terminalInteractor : MonoBehaviour
         {
             //Close Terminal
             terminalClosed = true;
+            gameObject.GetComponent<terminalRadio>().DeactivateWall();
             //add whatever visual trickery in here
             StartCoroutine(camZoomOut());
 
