@@ -33,6 +33,7 @@ public class terminalInteractor : MonoBehaviour
             terminalClosed = false;
             //add whatever visual trickery in here
             StartCoroutine(camZoomIn());
+            
 
             Debug.Log("TESTTERMINALOPENED");
         }
@@ -43,7 +44,7 @@ public class terminalInteractor : MonoBehaviour
             gameObject.GetComponent<terminalRadio>().DeactivateWall();
             //add whatever visual trickery in here
             StartCoroutine(camZoomOut());
-
+            
             Debug.Log("TESTTERMINALCLOSED");
         }
 
@@ -75,12 +76,16 @@ public class terminalInteractor : MonoBehaviour
         terminalCam.SetActive(true);
         yield return new WaitForSeconds(zoomTime);
         terminalScreen.SetActive(true);
+        terminalRadio radioScript = gameObject.GetComponent<terminalRadio>();
+        radioScript.SelectWall();
     }
 
     public IEnumerator camZoomOut()
     {
         terminalCam.SetActive(false);
-        yield return new WaitForSeconds(zoomTime);
+        yield return new WaitForSeconds(0);
         terminalScreen.SetActive(false);
+        terminalRadio radioScript = gameObject.GetComponent<terminalRadio>();
+        radioScript.DeselectWall();
     }
 }
