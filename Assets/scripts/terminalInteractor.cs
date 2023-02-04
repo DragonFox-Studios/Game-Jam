@@ -50,7 +50,7 @@ public class terminalInteractor : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && interacting && terminalClosed)
+        if (Input.GetKeyDown(KeyCode.E) && interacting && pauseGame.isGameRunning)
         {
             OpenTerminal();
         }

@@ -6,7 +6,6 @@ public class playerMovement : MonoBehaviour
 {
     public float speed = 10;
     private Rigidbody2D rb;
-    public static bool terminalInteraction = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,25 +17,36 @@ public class playerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-        if (terminalInteractor.terminalClosed)
+
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(speed * inputX, speed * inputY);
+
+        movement = movement * Time.deltaTime;
+
+        rb.velocity = (movement);
+
+    }
+
+    void CheckFreeze()
+    {
+        if (terminalInteractor.terminalClosed && pauseGame.isGameRunning)
         {
-            float inputX = Input.GetAxis("Horizontal");
-            float inputY = Input.GetAxis("Vertical");
-
-            Vector3 movement = new Vector3(speed * inputX, speed * inputY);
-
-            movement = movement * Time.deltaTime;
-
-            rb.velocity = (movement);
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!terminalInteraction)
-        {
-            MovePlayer();
-        }
+        CheckFreeze();
+        MovePlayer();
+        
     }
 }

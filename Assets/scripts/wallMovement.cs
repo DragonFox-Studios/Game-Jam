@@ -40,11 +40,8 @@ public class wallMovement : MonoBehaviour
         if ((moveAmount > 0 && totalMovement < positiveMoveLimit) || (moveAmount < 0 && totalMovement > negativeMoveLimit))
         {
             WallShift();
+            totalMovement = totalMovement + moveAmount;
         }
-
-
-
-        totalMovement = totalMovement + moveAmount;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 

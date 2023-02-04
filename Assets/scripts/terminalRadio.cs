@@ -45,7 +45,7 @@ public class terminalRadio : MonoBehaviour
 
     public void CycleTarget(bool cycleUp)
     {
-        if (cycleUp)
+        if (cycleUp && pauseGame.isGameRunning)
         {
             targetNumber++;
             if (targetNumber >= targetWalls.Count)
@@ -53,7 +53,7 @@ public class terminalRadio : MonoBehaviour
                 targetNumber = 0;
             }
         }
-        else
+        else if (pauseGame.isGameRunning)
         {
             targetNumber--;
             if (targetNumber < 0)
@@ -87,11 +87,11 @@ public class terminalRadio : MonoBehaviour
 
     public void CallWallMovement(bool isPositive)
     {
-        if (isPositive)
+        if (isPositive && pauseGame.isGameRunning)
         {
             moveAmount = 1;
         }
-        else
+        else if(pauseGame.isGameRunning)
         {
             moveAmount = -1;
         }
