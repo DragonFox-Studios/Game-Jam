@@ -19641,7 +19641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963193687301280917, guid: 8e6da40d7f9637d42984cf38c1d9be05, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4963193687301280919, guid: 8e6da40d7f9637d42984cf38c1d9be05, type: 3}
       propertyPath: m_Color.a
@@ -23539,7 +23539,7 @@ Tilemap:
     m_Data: {r: 5.828e-41, g: 5.828e-41, b: 5.828e-41, a: 5.828e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8962264, g: 0.78208435, b: 0.78208435, a: 1}
   m_Origin: {x: -20, y: -6, z: 0}
   m_Size: {x: 41, y: 35, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
