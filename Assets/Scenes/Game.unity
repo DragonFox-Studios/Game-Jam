@@ -18798,6 +18798,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1135727984502678131, guid: 6eeb801e253154248963e1ced38b2c4c, type: 3}
+      propertyPath: cycleUp
+      value: 
+      objectReference: {fileID: 1258047557}
+    - target: {fileID: 1135727984502678131, guid: 6eeb801e253154248963e1ced38b2c4c, type: 3}
+      propertyPath: buttonUp
+      value: 
+      objectReference: {fileID: 1409902004}
+    - target: {fileID: 1135727984502678131, guid: 6eeb801e253154248963e1ced38b2c4c, type: 3}
+      propertyPath: cycleDown
+      value: 
+      objectReference: {fileID: 1628255984}
+    - target: {fileID: 1135727984502678131, guid: 6eeb801e253154248963e1ced38b2c4c, type: 3}
+      propertyPath: buttonDown
+      value: 
+      objectReference: {fileID: 294257825}
+    - target: {fileID: 1135727984502678131, guid: 6eeb801e253154248963e1ced38b2c4c, type: 3}
+      propertyPath: buttonLeft
+      value: 
+      objectReference: {fileID: 1005772012}
+    - target: {fileID: 1135727984502678131, guid: 6eeb801e253154248963e1ced38b2c4c, type: 3}
+      propertyPath: buttonRight
+      value: 
+      objectReference: {fileID: 676968067}
+    - target: {fileID: 1135727984502678131, guid: 6eeb801e253154248963e1ced38b2c4c, type: 3}
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 1235558312}
@@ -24997,6 +25021,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3130821940142041445, guid: 8e6da40d7f9637d42984cf38c1d9be05, type: 3}
   m_PrefabInstance: {fileID: 810022300}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1258047557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4963193687886199786, guid: 8e6da40d7f9637d42984cf38c1d9be05, type: 3}
+  m_PrefabInstance: {fileID: 810022300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1278203339
 GameObject:
   m_ObjectHideFlags: 0
@@ -28110,6 +28139,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &1628255984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4963193686776291573, guid: 8e6da40d7f9637d42984cf38c1d9be05, type: 3}
+  m_PrefabInstance: {fileID: 810022300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1683788814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28118,9 +28152,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 38771044}
     m_Modifications:
     - target: {fileID: 7310368539378424272, guid: 829a12cfcf02fde4b96178706090c7b1, type: 3}
+      propertyPath: cycleUp
+      value: 
+      objectReference: {fileID: 1258047557}
+    - target: {fileID: 7310368539378424272, guid: 829a12cfcf02fde4b96178706090c7b1, type: 3}
       propertyPath: buttonUp
       value: 
       objectReference: {fileID: 1409902004}
+    - target: {fileID: 7310368539378424272, guid: 829a12cfcf02fde4b96178706090c7b1, type: 3}
+      propertyPath: cycleDown
+      value: 
+      objectReference: {fileID: 1628255984}
     - target: {fileID: 7310368539378424272, guid: 829a12cfcf02fde4b96178706090c7b1, type: 3}
       propertyPath: buttonDown
       value: 
@@ -30070,9 +30112,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 38771044}
     m_Modifications:
     - target: {fileID: 7310368539378424272, guid: 829a12cfcf02fde4b96178706090c7b1, type: 3}
+      propertyPath: cycleUp
+      value: 
+      objectReference: {fileID: 1258047557}
+    - target: {fileID: 7310368539378424272, guid: 829a12cfcf02fde4b96178706090c7b1, type: 3}
       propertyPath: buttonUp
       value: 
       objectReference: {fileID: 1409902004}
+    - target: {fileID: 7310368539378424272, guid: 829a12cfcf02fde4b96178706090c7b1, type: 3}
+      propertyPath: cycleDown
+      value: 
+      objectReference: {fileID: 1628255984}
     - target: {fileID: 7310368539378424272, guid: 829a12cfcf02fde4b96178706090c7b1, type: 3}
       propertyPath: buttonDown
       value: 
