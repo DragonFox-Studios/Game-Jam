@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class terminalRadio : MonoBehaviour
 {
@@ -24,7 +25,6 @@ public class terminalRadio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SelectWall();
     }
 
 
@@ -35,7 +35,7 @@ public class terminalRadio : MonoBehaviour
 
 
 
-    void SelectWall()
+    public void SelectWall()
     {
         Debug.Log("selectWall");
         //select the wall
@@ -44,10 +44,19 @@ public class terminalRadio : MonoBehaviour
         targetScript = targetWalls[targetNumber].GetComponent<wallMovement>();
         targetScript.isSelected = true;
         targetScript.sectionCam.SetActive(true);
-
+        GameObject targetWall = targetWalls[targetNumber].transform.GetChild(0).gameObject;
+        Tilemap tilemap = targetWall.GetComponent<Tilemap>();
+        tilemap.color = Color.red;
         //change the terminal
         isX = targetScript.isX;
         ChangeButtons();
+    }
+
+    public void DeselectWall()
+    {
+        GameObject targetWall = targetWalls[targetNumber].transform.GetChild(0).gameObject;
+        Tilemap tilemap = targetWall.GetComponent<Tilemap>();
+        tilemap.color = Color.white;
     }
 
     public void CycleTarget(bool cycleUp)
