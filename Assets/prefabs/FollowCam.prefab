@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4454225524199573529}
   - component: {fileID: 4454225524199573530}
   - component: {fileID: 4454225524199573531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4454225524836099779}
   - component: {fileID: 4454225524836099804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FollowCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
