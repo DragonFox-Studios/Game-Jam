@@ -37,6 +37,7 @@ public class terminalRadio : MonoBehaviour
 
     void SelectWall()
     {
+        Debug.Log("selectWall");
         //select the wall
         try { DeactivateWall(); }
         catch { }
@@ -51,6 +52,7 @@ public class terminalRadio : MonoBehaviour
 
     public void CycleTarget(bool cycleUp)
     {
+        Debug.Log("cycleTarget");
         if (cycleUp && pauseGame.isGameRunning)
         {
             targetNumber++;
