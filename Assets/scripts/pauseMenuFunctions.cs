@@ -16,6 +16,7 @@ public class pauseMenuFunctions : MonoBehaviour
     public void RestartGame()
     {
         pauseGame.isGameRunning = !pauseGame.isGameRunning;
+        terminalInteractor.terminalClosed = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
@@ -23,6 +24,7 @@ public class pauseMenuFunctions : MonoBehaviour
     public void MainMenu()
     {
         pauseGame.isGameRunning = !pauseGame.isGameRunning;
+        terminalInteractor.terminalClosed = true;
         SceneManager.LoadScene("StartMenu");
 
     }
