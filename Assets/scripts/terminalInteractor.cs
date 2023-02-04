@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class terminalInteractor : MonoBehaviour
 {
+
+    public GameObject terminalScreen;
+
     private bool interacting;
     public bool terminalClosed = true; //set this to True when terminal is closed
 
     public GameObject terminalCam;
-    public GameObject terminalScreen;
     public float zoomTime;
 
 

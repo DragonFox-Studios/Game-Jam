@@ -5,10 +5,6 @@ using UnityEngine;
 public class terminalRadio : MonoBehaviour
 {
 
-    public bool move = false;
-
-    public bool cycleTarget = false;
-
     private int targetNumber = 0;
 
     public int  moveAmount = 1;
@@ -20,6 +16,10 @@ public class terminalRadio : MonoBehaviour
     private wallMovement targetScript;
 
 
+    public GameObject buttonUp;
+    public GameObject buttonDown;
+    public GameObject buttonLeft;
+    public GameObject buttonRight; 
 
     // Start is called before the first frame update
     void Start()
@@ -40,21 +40,61 @@ public class terminalRadio : MonoBehaviour
 
         //change the terminal
         isX = targetScript.isX;
+        ChangeButtons();
     }
 
-    void CycleTarget()
+    public void CycleTarget(bool cycleUp)
     {
-        targetNumber++;
-        if (targetNumber >= targetWalls.Count)
+        if (cycleUp)
         {
-            targetNumber = 0;
+            targetNumber++;
+            if (targetNumber >= targetWalls.Count)
+            {
+                targetNumber = 0;
+            }
         }
+        else
+        {
+            targetNumber--;
+            if (targetNumber < 0)
+            {
+                targetNumber = targetWalls.Count - 1;
+            }
+        }
+
         SelectWall();
     }
 
 
-    void CallWallMovement()
+    void ChangeButtons()
     {
+        if (isX)
+        {
+            buttonUp.SetActive(false);
+            buttonDown.SetActive(false);
+            buttonLeft.SetActive(true);
+            buttonRight.SetActive(true);
+        }
+        else
+        {
+            buttonUp.SetActive(true);
+            buttonDown.SetActive(true);
+            buttonLeft.SetActive(false);
+            buttonRight.SetActive(false);
+        }
+    }
+
+
+    public void CallWallMovement(bool isPositive)
+    {
+        if (isPositive)
+        {
+            moveAmount = 1;
+        }
+        else
+        {
+            moveAmount = -1;
+        }
         targetScript.moveAmount = moveAmount;
         targetScript.MoveWalls();
     }
@@ -62,20 +102,6 @@ public class terminalRadio : MonoBehaviour
 
     void Update()
     {
-        if (cycleTarget)
-        {
-            CycleTarget();
-            cycleTarget = false;
-        }
-
-        if (move)
-        {
-            CallWallMovement();
-            move = false;
-        }
-
-
-
 
     }
 
