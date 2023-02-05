@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1517366608938837285}
   - component: {fileID: 1517366608938837290}
   - component: {fileID: 9063693896501975376}
+  - component: {fileID: 3308353837476931888}
   m_Layer: 0
   m_Name: playerBox
   m_TagString: Untagged
@@ -121,6 +122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 250
+  left: {fileID: 0}
+  right: {fileID: 0}
+  up: {fileID: 0}
+  down: {fileID: 0}
+  front: {fileID: 0}
 --- !u!70 &9063693896501975376
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,3 +143,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03872776, y: 0}
   m_Size: {x: 0.7110564, y: 1}
   m_Direction: 0
+--- !u!95 &3308353837476931888
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517366608938837284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 937f5e50aa888ac4198490198b53d2a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
