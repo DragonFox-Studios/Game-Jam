@@ -7,11 +7,13 @@ using UnityEngine.UI;
 public class SceneMangerScript : MonoBehaviour
 {
     private Animator animator;
-    public GameObject fadePannel;
-    public GameObject btnPannel;
+    public GameObject fadePanel;
+    public GameObject btnPanel;
+    public GameObject creditsPanel;
+    public GameObject controlsPanel;
 
     [Header("Text Objects")]
-    public GameObject textPannel;
+    public GameObject textPanel;
     public Text line1;
     public Text line2;
     public Text line3;
@@ -31,7 +33,7 @@ public class SceneMangerScript : MonoBehaviour
 
     private void Start()
     {
-        animator = fadePannel.GetComponent<Animator>();
+        animator = fadePanel.GetComponent<Animator>();
     }
 
     public void StartIntro()
@@ -39,16 +41,17 @@ public class SceneMangerScript : MonoBehaviour
         StartCoroutine(Intro());   
     }
 
+    //Intro sequence
     public IEnumerator Intro()
     {
-        fadePannel.SetActive(true);
+        fadePanel.SetActive(true);
         animator.SetBool("isFade", true);
 
         yield return new WaitForSeconds(wait1);
 
-        btnPannel.SetActive(false);
+        btnPanel.SetActive(false);
         animator.SetBool("isFade", false);
-        textPannel.SetActive(true);
+        textPanel.SetActive(true);
 
         yield return new WaitForSeconds(wait2);
 
@@ -69,16 +72,37 @@ public class SceneMangerScript : MonoBehaviour
         StartGame();
     }
 
+    //Load game scene
     public void StartGame()
     {
         Debug.Log("Starting game");
         SceneManager.LoadScene("Game");
     }
 
-    public void OpenOptions()
+    //Open and close credits window
+    public void OpenCredits()
     {
-
+        btnPanel.SetActive(false);
+        creditsPanel.SetActive(true);
     }
+    public void CloseCredits()
+    {
+        btnPanel.SetActive(true);
+        creditsPanel.SetActive(false);
+    }
+
+    //Open and close controls window
+    public void OpenControls()
+    {
+        btnPanel.SetActive(false);
+        controlsPanel.SetActive(true);
+    }
+    public void CloseControls()
+    {
+        btnPanel.SetActive(true);
+        controlsPanel.SetActive(false);
+    }
+
 
     public void Quit()
     {
