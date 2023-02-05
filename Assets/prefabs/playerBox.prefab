@@ -121,6 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 250
+  left: {fileID: -125434708, guid: c55c973fc46d67e4396a077262cce98d, type: 3}
+  right: {fileID: -856573900, guid: c55c973fc46d67e4396a077262cce98d, type: 3}
+  up: {fileID: -684499321, guid: c55c973fc46d67e4396a077262cce98d, type: 3}
+  down: {fileID: 1285069465, guid: c55c973fc46d67e4396a077262cce98d, type: 3}
+  front: {fileID: 1285069465, guid: c55c973fc46d67e4396a077262cce98d, type: 3}
 --- !u!70 &9063693896501975376
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
