@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SquareTile
+  m_Name: Untitled_Artwork (8)_6
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 7482667652216324306, guid: 4fa3e6826e6645e49a400bd9f95bc13f, type: 3}
-  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
+  m_Sprite: {fileID: 1283087159, guid: c9c2cf83214f73b42b68586b370deb55, type: 3}
+  m_Color: {r: 0.03737985, g: 0.3773585, b: 0.055936363, a: 0.74509805}
   m_Transform:
     e00: 1
     e01: 0
