@@ -110,6 +110,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 1
+  deathTime: 1
 --- !u!58 &5100853755523274861
 CircleCollider2D:
   m_ObjectHideFlags: 0
