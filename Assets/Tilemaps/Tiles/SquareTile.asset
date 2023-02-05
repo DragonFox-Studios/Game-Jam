@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SquareTile
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 7482667652216324306, guid: 4fa3e6826e6645e49a400bd9f95bc13f, type: 3}
-  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
+  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.8156863}
   m_Transform:
     e00: 1
     e01: 0
