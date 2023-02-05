@@ -71,7 +71,7 @@ public class playerMovement : MonoBehaviour
 
     bool CheckFreeze()
     {
-        if (terminalInteractor.terminalClosed && pauseGame.isGameRunning)
+        if (finalTeminalScript.terminalClosed && terminalInteractor.terminalClosed && pauseGame.isGameRunning)
         {
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
