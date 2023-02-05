@@ -1964,7 +1964,7 @@ MonoBehaviour:
   line3: {fileID: 1131639564}
   line4: {fileID: 55951407}
   txt1: You are a virus
-  txt2: Your job is to navigate through this sytem and gain root access
+  txt2: Your job is to navigate through this system and gain root access
   txt3: Avoid the sentries, foil the system and gain us control
   txt4: Good luck
   wait1: 3
