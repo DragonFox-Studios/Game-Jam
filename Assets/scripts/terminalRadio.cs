@@ -12,6 +12,8 @@ public class terminalRadio : MonoBehaviour
 
     public bool isX = true;
 
+    public Color targetColour;
+
     public List<GameObject> targetWalls = new List<GameObject>();
 
     private wallMovement targetScript;
@@ -48,7 +50,7 @@ public class terminalRadio : MonoBehaviour
         targetScript.sectionCam.SetActive(true);
         GameObject targetWall = targetWalls[targetNumber].transform.GetChild(0).gameObject;
         Tilemap tilemap = targetWall.GetComponent<Tilemap>();
-        tilemap.color = Color.red;
+        tilemap.color = targetColour;
         //change the terminal
         isX = targetScript.isX;
         ChangeButtons();
