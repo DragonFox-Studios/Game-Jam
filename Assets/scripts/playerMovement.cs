@@ -15,6 +15,8 @@ public class playerMovement : MonoBehaviour
     public Sprite down;
     public Sprite front;
 
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,26 +47,46 @@ public class playerMovement : MonoBehaviour
         {
             Debug.Log("Right");
             spr.sprite = right;
+            animator.SetBool("WalkRight", true);
+            animator.SetBool("WalkLeft", false);
+            animator.SetBool("WalkUp", false);
+            animator.SetBool("WalkDown", false);
         }
         else if (inputX < 0)
         {
             Debug.Log("left");
             spr.sprite = left;
+            animator.SetBool("WalkRight", false);
+            animator.SetBool("WalkLeft", true);
+            animator.SetBool("WalkUp", false);
+            animator.SetBool("WalkDown", false);
         }
         else if (inputY > 0)
         {
             Debug.Log("up");
             spr.sprite = up;
+            animator.SetBool("WalkRight", false);
+            animator.SetBool("WalkLeft", false);
+            animator.SetBool("WalkUp", true);
+            animator.SetBool("WalkDown", false);
         }
         else if (inputY < 0)
         {
             Debug.Log("down");
             spr.sprite = down;
+            animator.SetBool("WalkRight", false);
+            animator.SetBool("WalkLeft", false);
+            animator.SetBool("WalkUp", false);
+            animator.SetBool("WalkDown", true);
         }
         else
         {
             Debug.Log("standing");
             spr.sprite = front;
+            animator.SetBool("WalkRight", false);
+            animator.SetBool("WalkLeft", false);
+            animator.SetBool("WalkUp", false);
+            animator.SetBool("WalkDown", false);
         }
 
     }

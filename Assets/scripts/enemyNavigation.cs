@@ -11,12 +11,13 @@ public class enemyNavigation : MonoBehaviour
     private Transform target;
     public float speed = 1f;
     public float deathTime = 1;
+    public Animator animator;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator.SetBool("DefDown", true);
     }
 
 
@@ -49,6 +50,8 @@ public class enemyNavigation : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             StartCoroutine(DeathAnimation());
+            animator.SetBool("DefDown", false);
+            animator.SetBool("DefLeftAttack", true);
         }
     }
 

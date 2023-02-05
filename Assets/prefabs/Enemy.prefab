@@ -112,6 +112,7 @@ MonoBehaviour:
   - {fileID: 0}
   speed: 1
   deathTime: 1
+  animator: {fileID: 6775393362838983311}
 --- !u!58 &5100853755523274861
 CircleCollider2D:
   m_ObjectHideFlags: 0
