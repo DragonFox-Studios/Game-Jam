@@ -32642,7 +32642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701133180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1, y: 67.2, z: -11}
+  m_LocalPosition: {x: 1.39, y: 71.73, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33234,7 +33234,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: e4dd282531f2ad348b3b7541f92380f8, type: 3}
     - target: {fileID: 5009832138748532728, guid: 8e6da40d7f9637d42984cf38c1d9be05, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e6da40d7f9637d42984cf38c1d9be05, type: 3}
@@ -47717,7 +47717,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1534426119
@@ -47847,11 +47847,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4454225524836099779, guid: d35a0196fe0b91640bbc3930ecae7452, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 4454225524836099779, guid: d35a0196fe0b91640bbc3930ecae7452, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.2
+      value: 71.73
       objectReference: {fileID: 0}
     - target: {fileID: 4454225524836099779, guid: d35a0196fe0b91640bbc3930ecae7452, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52114,11 +52114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1517366608938837287, guid: b13aceef546a1164aa051f625250ec59, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 1517366608938837287, guid: b13aceef546a1164aa051f625250ec59, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.2
+      value: 71.73
       objectReference: {fileID: 0}
     - target: {fileID: 1517366608938837287, guid: b13aceef546a1164aa051f625250ec59, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54974,6 +54974,7 @@ GameObject:
   - component: {fileID: 705914194337719550}
   - component: {fileID: 705914194337719545}
   - component: {fileID: 705914194337719551}
+  - component: {fileID: 705914194337719552}
   m_Layer: 0
   m_Name: finalTerminal
   m_TagString: Untagged
@@ -55134,6 +55135,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   tilemap: {fileID: 1270134334}
+  terminalAnim: {fileID: 705914194337719552}
   fadePanel: {fileID: 127868268}
   txtPanel: {fileID: 744986410}
   line1: {fileID: 319076281}
@@ -55150,6 +55152,26 @@ MonoBehaviour:
   wait4: 3
   wait5: 2
   wait6: 3.5
+--- !u!95 &705914194337719552
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705914194337719493}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7444187be40a614da97b5c76c851bfe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &3813019320920701671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5100853755523274866, guid: c81922021fa90c047af298f7b0a8950c, type: 3}

@@ -14,6 +14,7 @@ public class finalTeminalScript : MonoBehaviour
     public Tilemap tilemap;
 
     private Animator animator;
+    public Animator terminalAnim;
     public GameObject fadePanel;
     public GameObject txtPanel;
 
@@ -63,6 +64,8 @@ public class finalTeminalScript : MonoBehaviour
     public IEnumerator StartTerminal()
     {
         terminalClosed = false;
+
+        terminalAnim.SetBool("Hacking", true);
 
         yield return new WaitForSeconds(wait1);
 
